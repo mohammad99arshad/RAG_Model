@@ -1,0 +1,42 @@
+# EMERGENCY RENDER REQUIREMENTS - NO COMPILATION NEEDED
+# Absolute minimal set for deployment - BINARY WHEELS ONLY
+
+# Core PyTorch (CPU-only) - guaranteed binary wheel
+torch==2.5.1
+
+# Essential for embeddings (might work without scipy)
+transformers==4.46.2
+sentence-transformers==3.2.1
+
+# FastAPI - guaranteed binary wheels
+fastapi==0.116.1
+uvicorn==0.35.0
+pydantic==2.11.7
+
+# Essential utilities - pure Python
+python-dotenv==1.1.1
+httpx==0.28.1
+
+# Only numpy (has binary wheels)
+numpy>=1.26.0,<1.27.0
+
+# Document processing (minimal)
+python-multipart
+pypdf>=5.8.0
+python-docx>=1.2.0
+beautifulsoup4>=4.13.0
+
+# LLM integration - binary wheels
+google-generativeai>=0.8.0
+openai>=1.97.0
+langchain>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# Essential for RAG functionality
+requests>=2.32.0
+
+# Vector storage and database
+pinecone>=7.3.0
+faiss-cpu>=1.8.0
+psycopg2-binary>=2.9.0
+sqlalchemy>=2.0.0
