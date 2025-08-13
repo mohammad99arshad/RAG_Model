@@ -1,0 +1,60 @@
+# PRODUCTION-READY REQUIREMENTS FOR RENDER DEPLOYMENT
+# PyTorch and ML dependencies - pinned for stability
+torch==2.5.1
+transformers==4.46.2
+sentence-transformers==3.2.1
+# Fixed: Use pre-compiled tokenizers to avoid Rust compilation
+tokenizers>=0.19.0,<0.21.0
+safetensors==0.4.5
+huggingface-hub==0.26.2
+
+# Scientific computing - USE PRE-COMPILED WHEELS
+numpy>=1.26.0,<1.27.0
+# Fixed: Use newer scipy with binary wheels for Python 3.13
+scipy>=1.13.0,<1.14.0
+scikit-learn>=1.5.0,<1.6.0
+joblib==1.4.2
+
+# FastAPI and web framework
+fastapi==0.116.1
+uvicorn==0.35.0
+starlette==0.47.2
+pydantic==2.11.7
+pydantic_core==2.33.2
+
+# Database and vector storage
+psycopg2-binary==2.9.10
+pinecone==7.3.0
+pinecone-plugin-assistant==1.7.0
+pinecone-plugin-interface==0.0.7
+
+# Document processing
+pypdf==5.8.0
+python-docx==1.2.0
+beautifulsoup4==4.13.4
+lxml==6.0.0
+
+# LLM clients
+openai==1.97.1
+google-generativeai==0.8.5
+
+# Langchain ecosystem
+langchain==0.3.27
+langchain-core==0.3.72
+langchain-text-splitters==0.3.9
+
+# Core utilities
+python-dotenv==1.1.1
+requests==2.32.4
+httpx==0.28.1
+click==8.2.1
+tqdm==4.67.1
+
+# Environment and configuration
+SQLAlchemy==2.0.41
+PyYAML==6.0.2
+Jinja2==3.1.6
+
+# Production optimizations
+filelock==3.18.0
+cachetools==5.5.2
